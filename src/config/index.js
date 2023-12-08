@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize(
-    'trabalho_db2',
+    'bd2-site_compras',
     'postgres',
-    'unochapeco',
+    'murilo',
     {
         host: 'localhost',
         dialect: "postgres"

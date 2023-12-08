@@ -1,5 +1,11 @@
-import Express from "express";
-import Routes from "./routes";
+// import Express from "express";
+// import Routes from "./routes"; // use require
+const Routes = require("./routes").default;
+const Express = require("express");
+
+import { connectToMongoDB, closeMongoDBConnection } from "./config/mongoose.js";
+
+connectToMongoDB().then(r => console.log(r)).catch(e => console.log(e));
 
 const app = Express();
 
